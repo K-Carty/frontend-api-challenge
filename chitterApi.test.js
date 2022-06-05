@@ -1,4 +1,4 @@
-const chitterApi = require('./chitterApi');
+const ChitterApi = require('./chitterApi');
 
 require('jest-fetch-mock').enableMocks()
 
@@ -8,7 +8,7 @@ beforeEach(() => {
 
 describe ('chitterApi', () => {
   it('use fetch to load data from the GET /notes endpoint', async () => {
-    const chitterApi = new chitterApi();
+    const chitterApi = new ChitterApi();
     
     fetch.mockResponseOnce(JSON.stringify(
       [
